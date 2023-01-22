@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="reg">
+		<div class="about">
+			<div class="nisa-logo">
+				<img src="img/nisa.png"> 
+				<div>
+					NIS
+				</div>
+			</div>
+			<div class="bottom">
+				Sign In
+				<div class="logos">
+					<img src="img/ib.png">
+					<img src="img/cis.png">
+				</div>
+			</div>
+		</div>
+		<div class="regform">
+			<form class="form" id="login">
+				<div class="form-message form-message-error">
+				
+				</div>
+				<div class="form-input-group">
+					<label for="login">LOGIN</label>
+					<input id="login" type="text" class="form-input" autofocus>
+				</div>
+				<div class="form-input-group">
+					<label for="password">PASSWORD</label>
+					<input type="password" id="password" class="form-input" autofocus>
+				</div>
+				<button onclick="login()" type="submit"class="form-button">
+					Sign in
+				</button>
+			</form>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
