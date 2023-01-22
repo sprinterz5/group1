@@ -1,217 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
 body{
 	margin: 0;
 	padding: 0;
-	overflow-x: hidden;
+	background-image: url("../img/background.png");
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	font-family: "Open Sans", sans-serif;
+
 }
-*{
+.reg{
+	
+	display: flex;
+	align-items: center;
+}
+.about{
+	color: white;
+	background-image: url("../img/about.png");
+	width:26vw;
+	height: 52vh;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+	background-size: cover;
+}
+.regform{
+	background-color: white;
+	width: 36vw;
+	height: 36vw;
+	display: flex;
+	align-items: center;
+}
+.form{
+	margin: auto 90px;
+	width: 100%;
+}
+.form-input-group{
+	color:#7E7E7E;
+	display: flex;
+	font-size: 18px;
+	flex-direction: column;
+	margin-bottom: 45px;
+}
+label{
+	color: #7E7E7E;
+}
+input.form-input{
+	font-size: 24px;
+	margin-top: 12px;
+}
+.form-input{
+	display: block;
 	box-sizing: border-box;
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	border-bottom: solid 1px #7E7E7E;
+	outline: none;
+	transition: 0.4s;
+	padding: 10px;
 }
-header{
+.form-input:focus{
+	background-color: #EFEFEF;
+	border-color: #6A6A6A;
+}
+.form-message {
+	text-align: center;
+	margin: 1rem 0 0;
+	margin-bottom: 10px;
+}
+.form-message-error{
+	color: #cc3333;
+}
+.nisa-logo{
 	font-family: "PT Sans";
-	margin: 35px 0 0;
-}
-.container{
-	max-width: 975px;
-	margin: 0 auto;
-}
-.header-upper{
-	display: grid;
-}
-.logo{
-	justify-self:center;
-}
-.logo-text{
 	font-size: 36px;
 }
-.buttons{
-	display: flex;
-	position: absolute;
-	z-index: 100;
-	justify-self: end;
-	align-self: flex-end;
+.bottom{
+		font-size: 40px;
 }
-.buttons img{
-	margin-left: 50px;
-
-}
-.nav-menu{
-	z-index: 1000;
-	position:absolute;
-	right: -100%;
-	height: 100%;
-	top: 0;
-	padding-top: 70px;
-	display: flex;
-	flex-direction: column;
-	background-color: #7fc241;
-	width: 20%;
-	text-align: center;
-	transition: 0.3s;
-	color: white;
-}
-.nav-item{
-	margin: 20px 0 0;
-	font-size: 24px;
-	font-family: "Open Sans";
-}
-.nav-menu.active{
-	right: 0;
-}
-.header-lower{
-	margin-top: 30px;
+.logos{
 	display: flex;
 	justify-content: space-between;
-	font-size: 21px;
-	margin-bottom: 30px;
+	align-items: center;
 }
-.header-lower a{
-	text-decoration: none;
-	color: black;
-	transition: 0.2s ease-in-out;
-}
-.header-lower a:hover{
-	opacity: 0.6;
-}
-a.nav-item{
-	text-decoration: none;
+.form-button{
+	background-color: #D4D4D4;
 	color: white;
-}
-.exit{
-	margin-top: 40px;
-	cursor: pointer;
-}
-.main{
-	margin-top: 70px;
-}
-.main-cards{
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-.main-card{
-	margin-bottom: 40px;
-	cursor: pointer;
-	width: 250px;
-	height: 250px;
-	border: solid 2px black;
-	border-radius: 20px;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-.card-number{
-	font-family: "Nunito", sans-serif;
-	font-size: 72px;
-}
-.card-title{
-	font-family: "Nunito", sans-serif;
-	font-size: 16px;
-}
-.assignments{
-	font-family: "Nunito";
-	background-color: #E4E4E4;
-	display: none;
-}
-.assignments.active{
-	display: block;
-}
-.assignment{
-	cursor: pointer;
-	padding: 10px 0;
-}
-.news-title{
-    font-weight: 500;
-    font-size: 30px;
-    margin-top: 5%;
-    color: black;
-    margin-bottom: 25px;
-}
-
-.news-cell{
-	text-decoration: none;
-    color: black;
-    width: 33%;
-    height: 450px;
-    margin-right: 20px;
-    counter-increment: news-cell;
-}
-.news img{
-    width: 100%;
-    height: 300px;
-}
-.news-author, .news-descriptions, .news-subtitle{
-    margin: 10px;
-    font-weight: 400;
-}
-.news-author{
-    font-size: 15px;
-}
-.news-subtitle{
-    font-size: 18px;
-}
-.news-descriptions{
-    font-size: 14px;
-}
-.news-outer{
-	margin-bottom: 7%;
-}
-.news{
-	margin-bottom: 70px;
-}
-article{
-	margin: 40px;
-}
-.article-title{
-	font-family: "Nunito";
-	margin:40px 0;
-	font-size: 28px;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	align-items: center;
-}
-article img{
-	margin-top: 40px;
-	width: 600px;
-	height: 600px;
-}
-article .container{
-	text-align: left;
+	font-size: 22px;
+	padding: 22px 50px;
 	font-family: "Open Sans";
-	font-size: 20px;
+	border: solid 0px;
+	border-radius: 40px;
+	outline: none;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
 }
-.ad{
-	position: absolute;
-	top: 50%;
+.form-button:hover{
+	background-color: #C3C3C3;
 }
-.ad img{
-	width:50%;
-	height:50%;
-}
-.article-cards{
-	font-family: "Nunito";
-	display: flex;
-	flex-direction: column;
-}
-.article-card{
-	display: flex;
-	align-items: center;
-	margin-bottom: 20px;
-}
-.subject{
-	font-size: 30px;
-	margin-right: 40px;
-}
-.grades{
-	display: flex;
-}
-.grade{
-	
-	font-size: 24px;
-	margin-right: 20px;
+.form-button:active{
+	transform: scale(0.98);
 }
